@@ -5,7 +5,11 @@
 #header {width: 100%; background-color: #fff; border-bottom: 1px solid #c6c6c6;}
 #banner {position: relative;}
 #movie {background-color: #f8f8f8;}
-#event {}
+#opening {
+    background: url(../img/bg01.jpg) no-repeat center top;
+    background-size: cover;
+    margin: 17px 0;
+}
 
 
 /* 가운데 영역 */
@@ -111,11 +115,100 @@
 
 
 /* 오프닝 */
-.opening{}
-.opening h2{}
+.opening{padding: 100px 0; text-align: center; color: #bb9b51;}
+.opening h2{margin-bottom: 15px;}
+.opening h2 .grand{
+    background-position: 0 -175px; 
+    display: inline-block;
+    width: 330px;
+    height: 50px;
+}
+.opening .date{
+    background-position: 0 -225px;
+    display: inline-block;
+    width: 260px;
+    height: 25px;
+}
+
+.opening .desc{
+    font-size: 35px;
+    font-weight: 300;
+    padding-bottom: 20px;
+    background: url(../img/bar.png) no-repeat bottom center;
+    background-size: 100%;
+}
+.opening .open_box{
+    overflow: hidden;
+    padding: 20px 3% 0 3%;
+}
+.opening .open_box > div{
+    float: left;
+    width: 27.333%;
+    margin: 4% 3% 0 3%;
+    box-sizing: border-box;
+    border: 1px solid #3e4b44;
+    background: rgba(0,0,0,.5);
+}
+
+.opening .open_box > div h3{
+    color: #fff;
+    border: 1px solid #6e3abb;
+    font-size: 19px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #551e9b;
+    margin-top: -24px;
+    font-weight: 300;
+}
+
+.opening .open_box > div p{
+    font-size: 23px;
+    color: #fff;
+    font-weight: 700;
+    padding: 6% 0 10% 0;
+}
+
+.opening .open_box > div em{
+    display: block;
+    font-weight: bold;
+}
+
+.opening .open_box > div strong{
+    display: block;
+    font-weight: bold;
+}
 
 
+/* 새로운 영화 */
+.new{padding: 100px 0; position: relative;}
+.new h2{font-size: 30px; font-weight: 500; margin-bottom: 20px;}
+.new .new_left{margin-right: 423px; height: 500px; background: #ccc url(../img/new01.jpg) center; background-size: cover; position: relative;}
+.new .new_left .play{position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; transform: translate(-50%, -50%);}
+.new .new_left .play .st0{fill: #fff; opacity: .3;}
+.new .new_left .play .st1{fill: #fff;}
+.new .new_right{position: absolute; right: 0; top: 165px; width: 400px; height: 500px; background: #f0f0f0; padding: 34px; box-sizing: border-box;}
+.new .new_right .title{font-size: 28px; color: #000; }
+.new .new_right .release{font-size: 12px; color: #333;}
+.new .new_right .star{padding: 14px 0;}
+.new .new_right .star strong{font-size: 15px; padding-left: 5px;}
+.new .new_right .star span{display: inline-block; width: 20px; height: 20px;  vertical-align: bottom;}
+.new .new_right .star .star1{background-position: -393px 0;}
+.new .new_right .star .star2{background-position: -412px 0;}
+.new .new_right .star .star0{background-position: -374px 0;}
 
+.new .new_right .summary{font-size: 14px;}
+.new .new_right .summary .genre{padding-bottom: 3px;}
+.new .new_right .summary .age{padding-bottom: 10px;}
+.new .new_right .summary .desc{height: 108px; overflow: hidden;}
+
+.new .new_right .select{overflow: hidden;}
+.new .new_right .select .s1{float: left; width: 49%; margin-right: 2%; background: #000;} 
+.new .new_right .select .s2{float: left; width: 49%; background: #000;}
+.new .new_right .select .s3{float: left; width: 100%; margin-top: 2%;}
+.new .new_right .btn{overflow: hidden; margin-top: 2%; text-align: center;}
+.new .new_right .btn a{float: left; width: 49%; box-sizing: border-box; display: block; padding: 10px 30px 12px 30px;}
+.new .new_right .btn a.white{background-color: #fff; margin-right: 2%; border: 1px solid #3a0e6a;}
+.new .new_right .btn a.purple{background-color: #3a0e6a; color: #fff; border: 1px solid #6e40c4;}
 
 
 
@@ -154,6 +247,13 @@
     .opening {padding: 50px 0;}
     .opening .open_box {display: none;}
     .opening .desc {background: none; font-size: 25px;}
+
+    .opening{padding: 50px 0;}
+    .opening .open_box{display: none;}
+    .opening .desc{ background: none; font-size: 25px;}
+
+    .new .new_left{margin-right: 0;}
+    .new .new_right{position: relative; width: 100%; height: auto; top: 0;}/* right부분에 영역을 줌. */
 }
 
 @media (max-width: 768px){
@@ -181,6 +281,13 @@
     .event h2{font-size: 24px; font-weight: 700;}
     .event .event_left{width: 100%; margin-right: 0;}
     .event .event_right{display: none;}
+    
+    #opening{margin: 0;}
+
+    #new .row{padding: 0 24px;}
+    .new{background: #fff; padding: 24px; margin-top: 24px;}
+    .new h2{font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;}
+    .new .new_right{padding: 24px;}
 }
 
 @media (max-width: 600px){
@@ -195,7 +302,6 @@
     .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color:#fff;}
     .swiper-pagination-bullet {width: 13px !important; height: 13px !important;}
 
-    #movie .container {}
     #movie .container:after {content: ''; position: absolute; z-index: 20; top: 0; right: 0; width: 8px; height: 100%; background: #d9d7e0;}
     #movie .row {position: relative; margin: 8px; padding: 16px; margin-right: 0; padding-right: 0;}
     #movie .row:after {content: ''; position: absolute; top: 0; right: 0; z-index: 10; width: 24px; height: 100%; background-color: #fff;}
@@ -226,6 +332,25 @@
     #event .row{padding: 0 8px;}
     .event{padding: 16px;}
     .event h2{font-size: 18px; margin-bottom: 8px;}
+
+    .opening{padding: 20px 0;}
+    .opening h2 .grand{
+        background-size: 300px; 
+        background-position: 0 -105px;
+        width: 197px; height: 24px;
+    }
+    .opening h2{margin-bottom: 10px;}
+    .opening .date{display: none;}
+    .opening .desc{font-size: 16px; font-weight: 400;}
+
+    #new .row{padding: 0 8px;}
+    .new{padding: 16px; margin-top: 8px;}
+    .new h2{font-size: 18px; margin-bottom: 0;}
+    .new .new_left{height: 300px;}
+    .new .new_right{padding: 17px;}
+    .new .new_right .title{font-size: 22px;}
+    .new .new_right .select .s1{width: 100%; margin-right: 0; margin-bottom: 2%;}
+    .new .new_right .select .s2{width: 100%;}
 }
 
 @media (max-width: 480px){

@@ -722,6 +722,7 @@
 /* help */
 .help {
     overflow: hidden;
+    padding-bottom: 200px;
 }
 
 .help article {

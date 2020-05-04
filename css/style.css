@@ -28,6 +28,10 @@
     margin: 17px 0;
 }
 
+#footer{
+    background: #211f1f;
+}
+
 
 /* 가운데 영역 */
 .container {
@@ -718,7 +722,6 @@
 /* help */
 .help {
     overflow: hidden;
-    padding-bottom: 200px;
 }
 
 .help article {
@@ -905,6 +908,32 @@
     font-weight: 500;
 }
 
+/* 푸터 */
+.footer_sns{position: absolute; right: 17px; top: 33px; z-index: 1;}
+.footer_sns li{display: inline-block; margin: 0 2px;}
+.footer_sns li a{display: block; width: 36px; height: 36px; }
+.footer_sns li.s1{background-position: 0 -375px;}
+.footer_sns li.s2{background-position: -36px -375px;}
+.footer_sns li.s3{background-position: -72px -375px;}
+.footer_sns li.s4{background-position: -108px -375px;}
+.footer_sns li.s5{background-position: -144px -375px;}
+.footer_sns li.s1:hover{background-position: 0 -411px;}
+.footer_sns li.s2:hover{background-position: -36px -411px;}
+.footer_sns li.s3:hover{background-position: -72px -411px;}
+.footer_sns li.s4:hover{background-position: -108px -411px;}
+.footer_sns li.s5:hover{background-position: -144px -411px;}
+.footer_sns .tel{text-align: right; padding-top: 5px;}
+.footer_sns .tel a{color: #8f8f8f; font-size: 21px;}
+.footer_sns .tel a em{color: #fff;}
+.footer_infor{padding: 50px 0; width: 80%;}
+.footer_infor img{width: 150px;}
+.footer_infor ul{padding: 15px 0;}
+.footer_infor ul li{position: relative; display: inline; padding-right: 15px; white-space: nowrap;/* 2줄 되는 것을 한줄로 */}
+.footer_infor ul li:after{content:''; position: absolute; right: 5px; top: 5px; width: 1px; height: 11px; background: #8f8f8f;}
+.footer_infor ul li:last-child:after{width: 0; height: 0;}
+.footer_infor li a{color: #8f8f8f;}
+.footer_infor address p{color: #8f8f8f; padding-bottom: 15px;}
+
 
 
 /* 미디어쿼리 */
@@ -1073,6 +1102,19 @@
     }
 
     /* right부분에 영역을 줌. */
+
+    .help{padding-bottom: 24px;}
+
+    .footer_sns{
+        position: static; /* 기본값 */
+        text-align: center; /* inline구조라 text-align 적용 됨 */
+        background: #352c2c;
+        padding-bottom: 15px;
+    }
+    .footer_sns .tel{
+        display: none;
+    }
+    .footer_infor{width: 100%;text-align: center;}
 }
 
 @media (max-width: 768px) {

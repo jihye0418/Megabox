@@ -51,7 +51,13 @@
 </head>
 
 <body>
-
+<!-- 스킵메뉴 -->
+<div id="skip">
+    <a rel="bookmark" href="#movie">최신 영화 소식</a>
+    <a rel="bookmark" href="#event">새로운 이벤트</a>
+    <a rel="bookmark" href="#new">새로운 영화</a>
+</div>
+<!-- //스킵메뉴 -->
     <header id="header">
         <div class="container">
             <div class="row">
@@ -890,7 +896,7 @@
                 <div class="new">
                     <h2>새로운 영화</h2>
                     <div class="new_left">
-                        <div class="play">
+                        <div class="play" id="showTrailer" data-youtube="F1239ZePXfM">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
                                 <circle class="st0" cx="60" cy="60.4" r="56" />
                                 <path class="st1" d="M81,65.4c4.8-2.8,4.8-7.2,0-10L53.5,39.6c-4.8-2.8-8.7-0.5-8.7,5v31.7c0,5.5,3.9,7.8,8.7,5L81,65.4z" />
@@ -979,53 +985,53 @@
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong><em>2020.05.04</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong><em>2020.05.04</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong><em>2020.05.04</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong><em>2020.05.04</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a href="#">영화관 공지</a>
-                                    <ul style="display: none">
+                                    <ul>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">안양</strong><em>2020.05.04</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">서울</strong><em>2020.05.04</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">부산</strong><em>2020.05.04</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">경기</strong><em>2020.05.04</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                     </ul>
@@ -1564,6 +1570,16 @@
     </footer>
 
 
+    <!-- 트레일러 -->
+    <aside id="blackout" class="overlay">
+        <div id="trailerModal" class="modal">
+            <div id="trailer"></div><!-- YouTube 플레이어로 대체되는 부분 -->
+        </div>
+        <button id="hideTrailer" class="modal_close">닫기</button>
+    </aside>
+    <!-- //트레일러 -->
+
+
 
 
     <!-- 자바스크립트 라이브러리 -->
@@ -1571,6 +1587,8 @@
     <script src="js/modernizr-custom.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/ie-checker.js"></script>
+    <script src="js/iframe_api.js"></script>
+    <script src="js/movie.js"></script>
 
     <script>
         //배너 이미지 슬라이드
@@ -1638,6 +1656,24 @@
             movCont.eq(index).css("display", "block");
         });
 
+        //공지사항 탭 메뉴
+        var tabMenu = $('.notice');
+
+        tabMenu.find('ul > li > ul').hide();//컨텐츠 내용 숨기기        
+        tabMenu.find('li.active > ul').show();//active가 붙은것만 보이게 하기
+
+        //active가 있으면 보이고, 없으면 보이지 않게 하는 함수
+        function tabList(e){
+            e.preventDefault();//링크 기능 차단 (상단으로 올라가는 거 방지)
+            var target = $(this); //누가 클릭 되었는지 구분하기 위함
+            target.next().show().parent('li').addClass('active').siblings('li').removeClass('active').find('ul').hide(); //클릭된 것의 다음 태그를 보여주고 부모 태그인 'li'를 찾아서 active클래스를 추가해라.
+                                                                //그리고 형제 요소 중에 li를 찾아서 active 클래스를 지우고 ul을 찾아서 숨겨라. 
+            //버튼을 클릭하면 ul을 보여주고
+            //부모의 li 태그에 클래스를 추가하고
+            //형제의 li태그에 클래스를 제거하고
+            //제거한 자식의 ul 태그를 숨겨줌
+        }
+        tabMenu.find('ul > li > a').click(tabList).focus(tabList); //tab을 했을 때 제목 다음에 바로 목록으로 가도록 focus 설정
     </script>
 </body>
 
